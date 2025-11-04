@@ -269,5 +269,5 @@ Bu proje eğitim amaçlı geliştirilmiştir.
 ---
 
 **Geliştirici:** [Ertuğrul Kara]  
-**Tarih:** 2024  
+**Tarih:** 2025  
 **Versiyon:** 1.0.0
