@@ -8,6 +8,11 @@ namespace OgrenciServis.DataAccess
         // Constructor
         public OkulContext(DbContextOptions<OkulContext> options) : base(options)
         {
+            //1970-01-01 00:00:00 Unix Epoch başlangıç tarihi
+            //1946-01-01 00:00:00 Alan Turing tarihi
+            //0001-01-01 00:00:00 C# DateTime.MinValue başlangıç tarihi
+
+            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             //postgreSQL DB kullandığımız için zorunlu Tarih formatını C# ile uyumlu hale getirmek için
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
