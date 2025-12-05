@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OgrenciServis.Logic.Interface;
 using OgrenciServis.Models;
 using OgrenciServis.Models.DTO;
@@ -7,6 +8,7 @@ namespace OgrenciServis.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class OgretmenController : ControllerBase
     {
         private readonly IOgretmen ogretmen;
@@ -17,7 +19,8 @@ namespace OgrenciServis.Api.Controllers
         }
 
         // GET: api/Ogretmen
-        [HttpGet]   
+        [HttpGet]
+        [AllowAnonymous]
         public ActionResult<IEnumerable<OgretmenDto>> GetOgretmenler()
         {
             return Ok(this.ogretmen.TumOgretmenleriListele());
@@ -25,6 +28,7 @@ namespace OgrenciServis.Api.Controllers
 
         // GET: api/Ogretmen/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Ogretmen")]
         public ActionResult<OgretmenDto> GetOgretmen(int id)
         {
             var ogretmenDto = this.ogretmen.OgretmenGetirById(id);
@@ -39,6 +43,7 @@ namespace OgrenciServis.Api.Controllers
 
         // POST: api/Ogretmen
         [HttpPost]
+        [Authorize]
         public ActionResult<Ogretmen> PostOgretmen([FromBody] Ogretmen ogretmen)
         {
             if (!ModelState.IsValid)

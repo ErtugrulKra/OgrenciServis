@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OgrenciServis.Logic.Interface;
 using OgrenciServis.Models;
@@ -18,6 +19,7 @@ namespace OgrenciServis.Api.Controllers
 
         // GET: api/Sinav
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult<IEnumerable<SinavDto>> GetSinavlar()
         {
             return Ok(this.sinav.TumSinavlariListele());
@@ -25,6 +27,7 @@ namespace OgrenciServis.Api.Controllers
 
         // GET: api/Sinav/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "User")]
         public ActionResult<SinavDto> GetSinav(int id)
         {
             var sinavDto = this.sinav.SinavGetirById(id);

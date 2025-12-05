@@ -71,30 +71,43 @@
 - [x] SwaggerUI yapılandırması
 - [x] API dokümantasyonu
 
+### ✅ 12. JWT Authentication ve Authorization
+- [x] JWT (JSON Web Token) nedir? Basit açıklama
+- [x] Authentication (Kimlik Doğrulama) nedir?
+- [x] Authorization (Yetkilendirme) nedir? Basit fark
+- [x] JWT paketlerinin kurulumu (Microsoft.AspNetCore.Authentication.JwtBearer)
+- [x] Basit User/Login model oluşturma
+- [x] Authentication Controller (Login endpoint) - Adım adım
+- [x] JWT Token oluşturma servisi - Basit implementasyon
+- [x] appsettings.json'da JWT ayarları (Secret Key)
+- [x] Program.cs'de JWT yapılandırması - Kopyala-yapıştır örnek
+- [x] [Authorize] attribute ile endpoint koruma - Basit kullanım
+
 ---
 
 ## 🎯 DEVAM EDİLECEK KONULAR (Sırayla İşlenecek Dersler)
 
-### 📍 DERS 1: JWT Authentication ve Authorization
+### ✅ DERS 1: JWT Authentication ve Authorization
 **Öncelik: YÜKSEK** ⭐ (Zorunlu)
 **Seviye:** Başlangıç
+**Durum:** Tamamlandı
 
 #### Alt Konular:
-- [ ] JWT (JSON Web Token) nedir? Basit açıklama
-- [ ] Authentication (Kimlik Doğrulama) nedir?
-- [ ] Authorization (Yetkilendirme) nedir? Basit fark
-- [ ] JWT paketlerinin kurulumu (Microsoft.AspNetCore.Authentication.JwtBearer)
-- [ ] Basit User/Login model oluşturma
-- [ ] Authentication Controller (Login endpoint) - Adım adım
-- [ ] JWT Token oluşturma servisi - Basit implementasyon
-- [ ] appsettings.json'da JWT ayarları (Secret Key)
-- [ ] Program.cs'de JWT yapılandırması - Kopyala-yapıştır örnek
-- [ ] [Authorize] attribute ile endpoint koruma - Basit kullanım
+- [x] JWT (JSON Web Token) nedir? Basit açıklama
+- [x] Authentication (Kimlik Doğrulama) nedir?
+- [x] Authorization (Yetkilendirme) nedir? Basit fark
+- [x] JWT paketlerinin kurulumu (Microsoft.AspNetCore.Authentication.JwtBearer)
+- [x] Basit User/Login model oluşturma
+- [x] Authentication Controller (Login endpoint) - Adım adım
+- [x] JWT Token oluşturma servisi - Basit implementasyon
+- [x] appsettings.json'da JWT ayarları (Secret Key)
+- [x] Program.cs'de JWT yapılandırması - Kopyala-yapıştır örnek
+- [x] [Authorize] attribute ile endpoint koruma - Basit kullanım
 
 **Pratik Uygulama:**
-- Login endpoint'i oluşturma (adım adım)
-- Bir endpoint'i [Authorize] ile koruma
-- Swagger'da token ile test etme
+- [x] Login endpoint'i oluşturma (adım adım)
+- [x] Bir endpoint'i [Authorize] ile koruma
+- [x] Swagger'da token ile test etme
 
 ---
 
@@ -304,8 +317,8 @@
 ## 📊 ÖNCELİK SIRASI (Önerilen İşleme Sırası)
 
 ### Faz 1: Temel Güvenlik ve Stabilite (Hemen - İlk 2 Hafta)
-1. ✅ **DERS 1: JWT Authentication** ⭐ (Zorunlu)
-2. ✅ **DERS 2: Exception Handling**
+1. ✅ **DERS 1: JWT Authentication** ⭐ (Zorunlu) - **TAMAMLANDI**
+2. ⏳ **DERS 2: Exception Handling** - **SIRADAKİ KONU**
 
 ### Faz 2: Kod Kalitesi ve Temel Özellikler (2-4 Hafta)
 3. ✅ **DERS 3: Logging**

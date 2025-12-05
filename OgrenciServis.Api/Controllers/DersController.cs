@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OgrenciServis.Logic.Interface;
 using OgrenciServis.Models;
@@ -18,6 +19,7 @@ namespace OgrenciServis.Api.Controllers
 
         // GET: api/Ders
         [HttpGet]
+        [AllowAnonymous]
         public ActionResult<IEnumerable<DersDto>> GetDersler()
         {
             return Ok(this.ders.TumDersleriListele());
@@ -25,6 +27,7 @@ namespace OgrenciServis.Api.Controllers
 
         // GET: api/Ders/5
         [HttpGet("{id}")]
+        [Authorize]
         public ActionResult<DersDto> GetDers(int id)
         {
             var dersDto = this.ders.DersGetirById(id);
@@ -39,6 +42,7 @@ namespace OgrenciServis.Api.Controllers
 
         // POST: api/Ders
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult<Ders> PostDers([FromBody] Ders ders)
         {
             if (!ModelState.IsValid)
@@ -52,6 +56,7 @@ namespace OgrenciServis.Api.Controllers
 
         // PUT: api/Ders/5
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public ActionResult<Ders> PutDers(int id, [FromBody] Ders ders)
         {
             if (!ModelState.IsValid)
