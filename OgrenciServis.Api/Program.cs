@@ -66,6 +66,7 @@ namespace OgrenciServis.Api
             builder.Services.AddScoped<ISinif, SinifServis>();
             builder.Services.AddScoped<ISinav, SinavServis>();
 
+
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 

@@ -116,12 +116,12 @@
 **Seviye:** Başlangıç
 
 #### Alt Konular:
-- [ ] Try-Catch blokları nedir? Basit örnekler
-- [ ] Exception (Hata) nedir? Ne zaman oluşur?
-- [ ] Basit Custom Exception sınıfı oluşturma (NotFoundException)
-- [ ] Global Exception Handler Middleware - Basit implementasyon
-- [ ] Hata mesajlarını kullanıcıya gösterme
-- [ ] Basit hata response formatı
+- [X] Try-Catch blokları nedir? Basit örnekler
+- [X] Exception (Hata) nedir? Ne zaman oluşur?
+- [X] Basit Custom Exception sınıfı oluşturma (NotFoundException)
+- [X] Global Exception Handler Middleware - Basit implementasyon
+- [X] Hata mesajlarını kullanıcıya gösterme
+- [X] Basit hata response formatı
 
 **Pratik Uygulama:**
 - Bir NotFoundException sınıfı oluşturma

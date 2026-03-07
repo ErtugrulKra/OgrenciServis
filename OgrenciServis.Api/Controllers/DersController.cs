@@ -15,6 +15,7 @@ namespace OgrenciServis.Api.Controllers
         public DersController(IDers ders)
         {
             this.ders = ders;
+
         }
 
         // GET: api/Ders

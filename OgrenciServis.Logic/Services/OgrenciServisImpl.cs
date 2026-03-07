@@ -1,6 +1,7 @@
 ﻿using OgrenciServis.DataAccess;
 using OgrenciServis.Models;
 using OgrenciServis.Models.DTO;
+using OgrenciServis.Models.Exceptions;
 
 namespace OgrenciServis.Logic.Services
 {
@@ -54,12 +55,21 @@ namespace OgrenciServis.Logic.Services
                                  SinifNo = sinif.SinifNo
                              }).FirstOrDefault();
 
+                if (sonuc == null)
+                {
+                    throw new NotFoundException("Öğrenci", id);
+                }
+
                 return sonuc;
 
             }
-            catch (Exception)
+            catch (NotFoundException)
             {
-                throw;
+                throw; //Tekrar fırlat
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Beklenmeyen hata olustu", ex);
             }
         }
 
